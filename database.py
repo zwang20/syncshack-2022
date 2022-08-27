@@ -14,13 +14,29 @@ class SQLDatabase():
     def commit(self):
         self.conn.commit()
 
-    def storeText(self, text, ctext):
+
+    def storeText(self, text: str, ctext: str) -> NULL:
+        """
+        To store the context use input and the result
+        concluded from the ML algorithnm
+
+        storeText(text, ctext)
+        text: User text input
+        ctext: The conclusion of the text user input
+        """
         query = """
                 INSERT INTO Context VALUES (?, ?);
                 """
         self.cur.execute(query, (text,ctext))
 
-    def getText(self):
+
+    def getText(self) -> str:
+        """
+        To get the original context and the result concluded from the Algorithnm
+
+        getText()
+        output: [(original Context, conclusion text)]
+        """
         query = """
                 SELECT * FROM Context;
                 """
