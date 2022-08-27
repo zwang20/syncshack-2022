@@ -1,5 +1,6 @@
 import sqlite3
 
+
 class SQLDatabase():
     '''
         Our SQL Database
@@ -18,7 +19,7 @@ class SQLDatabase():
         query = """
                 INSERT INTO Context VALUES (?, ?);
                 """
-        self.cur.execute(query, (text,ctext))
+        self.cur.execute(query, (text, ctext))
 
     def getText(self):
         query = """
@@ -28,8 +29,10 @@ class SQLDatabase():
         results = self.cur.fetchall()
         return results
 
+
 ## thing for test
-# testpr = SQLDatabase()
-# testpr.storeText("fix it", "fix")
-# res = testpr.getText()
-# print(res)
+if __name__ == "__main__":
+    testpr = SQLDatabase()
+    testpr.storeText("fix it", "fix")
+    res = testpr.getText()
+    print(res)
