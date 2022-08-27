@@ -1,11 +1,11 @@
 import sqlite3
 
 
-class SQLDatabase():
-    '''
+class SQLDatabase:
+    """
         Our SQL Database
 
-    '''
+    """
 
     # Get the database running
     def __init__(self):
@@ -30,7 +30,7 @@ class SQLDatabase():
         return results
 
 
-## thing for test
+# thing for test
 if __name__ == "__main__":
     testpr = SQLDatabase()
     testpr.storeText("fix it", "fix")
