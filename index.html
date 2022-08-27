@@ -17,8 +17,15 @@
   }
 
 	.textinput{
-	    height:30vh;
-			width: 30vw;
+	    height:10vh;
+			width: 65vw;
+	    font-size:14pt;
+	}
+
+	.textoutput{
+		display: inline-block;
+	    height:10vh;
+			width: 65vw;
 	    font-size:14pt;
 	}
 
@@ -34,7 +41,7 @@
 	  margin: 2px 1px;
 	  cursor: pointer;
     float: left;
-		margin-top: 00px;
+		margin-top: 10px;
     margin-left: 400px;
 }
 
@@ -45,13 +52,20 @@
 	<body>
 
 		<div class='course'>
-			  <!-- <h1><b>Enter Password</b></h1> -->
+			  <!-- <h1><b>Enter message</b></h1> -->
 				    <form action="/profile_cp" method="get">
-			           Put your message here: <input class="textinput" msg="msg" type="text">
-            <br>
-                 <input class="button" value="Go" type="submit" />
+			           Put your message here: <textarea class="textinput" msg="msg" type="text" ></textarea>
+					  <br>
+						     <input class="button" value="Go" type="submit" />
 					  </form>
+
+					<form action="/profile_cp" method="post">
+						Output: <output class="textoutput" msg="msg" type="text" />
+
+					</form>
 		</div>
+
+
 
 	</body>
 
